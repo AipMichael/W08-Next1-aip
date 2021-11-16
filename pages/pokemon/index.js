@@ -11,7 +11,9 @@ export default function Pokemon() {
       (async () => {
         const {
           data: { results: pokemons },
-        } = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=10%22");
+        } = await axios.get(
+          "https://pokeapi.co/api/v2/pokemon?limit=10&offset=7"
+        );
 
         setPokemons(pokemons);
       })(),
