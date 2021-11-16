@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (params) => {
   const response = await fetch(
-    "https://pokeapi-menchu.herokuapp.com/pokemon" + id
+    `https://pokeapi-menchu.herokuapp.com/pokemon/${params.id}`
   );
   const pokeAPI = await response.json();
   return {
