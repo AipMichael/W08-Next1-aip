@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -17,7 +18,9 @@ export default function Home() {
             Welcome to <a href="https://www.pokemon.com/us/">PokeNext</a>
           </h1>
           <div className={styles.headerMenu}>
-            <h2 className={styles.headRoutes}>Pokémon</h2>
+            <Link href="/pokemon" cllinkssName={styles.headRoutes}>
+              Pokémon
+            </Link>
             <h2 className={styles.headRoutes}>Poke SSR</h2>
             <h2 className={styles.headRoutes}>Poke SSG</h2>
             <h2 className={styles.headRoutes}>Poke ISR</h2>
