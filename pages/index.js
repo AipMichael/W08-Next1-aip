@@ -21,9 +21,15 @@ export default function Home() {
             <Link href="/pokemon" cllinkssName={styles.headRoutes}>
               Pokémon
             </Link>
-            <h2 className={styles.headRoutes}>Poke SSR</h2>
-            <h2 className={styles.headRoutes}>Poke SSG</h2>
-            <h2 className={styles.headRoutes}>Poke ISR</h2>
+            <Link href="/pokessr" className={styles.headRoutes}>
+              Poke SSR
+            </Link>
+            <Link href="/pokessg" className={styles.headRoutes}>
+              Poke SSG
+            </Link>
+            <Link href="/pokeisr" className={styles.headRoutes}>
+              Poke ISR
+            </Link>
           </div>
         </header>
         Powered by{" your worst nightmare"}
