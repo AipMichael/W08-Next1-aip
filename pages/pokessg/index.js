@@ -3,12 +3,12 @@ import axios from "axios";
 import Link from "next/link";
 import styles from "../../styles/pokemon.module.css";
 
-function PokeSsr({ pokemons }) {
+function PokeSsg({ pokemons }) {
   return (
     <>
       <header className={styles.headerBar}>
         <h1 className={styles.title}>
-          Poke-hola. Esto es de Server-Side Rendering
+          Poke-hola. Esto es de Static Site Generation
         </h1>
         <div className={styles.headerMenu}>
           <Link href="/" cllinkssName={styles.headRoutes}>
@@ -37,11 +37,11 @@ function PokeSsr({ pokemons }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch(`https://pokeapi-menchu.herokuapp.com/pokemon`);
   const pokemons = await res.json();
 
   return { props: { pokemons } };
 }
 
-export default PokeSsr;
+export default PokeSsg;
